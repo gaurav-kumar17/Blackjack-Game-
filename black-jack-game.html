@@ -20,21 +20,6 @@
         #message-el {
             font-style: italic;
         }
-
-        button {
-            color: #016f32;
-            width: 150px;
-            margin: auto;
-            background-color: goldenrod;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-            border-radius: 2px;
-            display: block;
-            margin-bottom: 10px;
-        }
     </style>
 </head>
 
@@ -52,11 +37,10 @@
 <script>
     // let firstCard=10;
     // let SecondCard=5;
-    let player={
-        name:"Gaurav",
-        chips:200,
-        sayhello:function()
-        {
+    let player = {
+        name: "Gaurav",
+        chips: 200,
+        sayhello: function () {
             console.log("Namaste!");
         }
     }
@@ -73,10 +57,10 @@
     let sumEl = document.querySelector("#sum-el");
     let cardsEl = document.querySelector("#cards-el");
 
-    
-    
-    let playerEl=document.getElementById("player-el");
-    playerEl.textContent=player.name + ": $" + player.chips;
+
+
+    let playerEl = document.getElementById("player-el");
+    playerEl.textContent = player.name + ": $" + player.chips;
 
     // console.log(cards);
     function getRandomCard() {
@@ -132,7 +116,7 @@
     function newCard() {
 
         // only allow the player to get a new card if he is alive and doesnot have a blackjack
-        if (isAlive == true && hasBlackJack==false) {
+        if (isAlive == true && hasBlackJack == false) {
             let card = getRandomCard();
             sum += card;
             cards.push(card);
